@@ -7,28 +7,42 @@ body {
   /* งาน 1: เปลี่ยนสีพื้นหลังและสีตัวอักษรของหน้าเว็บ */
   background-color: white;
   color: black;
+  text-align: center; 
 }
 
 /* กล่องที่ครอบการ์ดทั้งหมด จัดเรียงเป็นแนวนอน */
 .card-container {
   display: flex;
-  gap: 16px;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
 }
 
 .card {
   /* งาน 2: ตกแต่งการ์ด เช่น border, border-radius, padding, background-color */
-  border: 1px solid gray;
-  padding: 8px;
+  border: 2px solid gray;
+  border-radius: 8px;
+  background-color: white;
+  padding: 16px;
+  text-align: center; 
 }
 
 .card-name {
   /* งาน 3: ตกแต่งชื่อในการ์ด เช่น color, font-size */
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  text-align: center; 
 }
 
 button {
   /* งานเสริม: ตกแต่งปุ่ม */
   margin-top: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
 /* โหมดมืด: script.js จะเพิ่ม class "dark" ให้ body */
@@ -36,4 +50,13 @@ body.dark {
   /* งานเสริม: กำหนดสีของโหมดมืด */
   background-color: #222222;
   color: white;
+}
+
+body.dark .card {
+  background-color: #333333;
+  border-color: #555555;
+}
+
+body.dark .card-name {
+  color: #f8fafc;
 }
